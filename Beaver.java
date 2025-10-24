@@ -79,7 +79,7 @@ public class Beaver
 
     public static void main(String[] args)
     {
-        String beaver = args.length > 1 ? args[1] : "1RB1LB_1LA1RZ";
+        String beaver = args.length > 0 ? args[0] : "1RB1LB_1LA1RZ";
         Beaver b = new Beaver(beaver);
         
         BigInteger maxStepsToRun = BigInteger.ZERO;

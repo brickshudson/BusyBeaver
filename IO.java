@@ -24,7 +24,7 @@ public class IO
     
     public static void SaveTransitionList(EnumerateSubtapes subtapes) throws IOException
     {
-        String fileName = subtapes.beaver.beaverString + "_transitions" + subtapes.subtapeLength + ".txt";
+        String fileName = dataPath + subtapes.beaver.beaverString + "_transitions" + subtapes.subtapeLength + ".txt";
         PrintWriter pw = new PrintWriter(new File(fileName));
 
         // For each transition, generate a line with <source tape> <steps taken> <result tape>
@@ -50,9 +50,10 @@ public class IO
         pw.close();
     }
 
-    public static void systemOutToFile(String outputFileName) throws FileNotFoundException
+    public static void systemOutToFile(String outputFileName) throws IOException
     {
-        PrintStream ps = new PrintStream(new File(dataPath + outputFileName));
+        File outFile = new File(dataPath + outputFileName);
+        PrintStream ps = new PrintStream(outFile);
         System.setOut(ps);
     }
 }

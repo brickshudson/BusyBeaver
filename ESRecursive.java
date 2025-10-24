@@ -407,23 +407,23 @@ public class ESRecursive
         // Get command line arguments if applicable
         try
         {
-            beaver = args.length > 1 ? args[1] : beaver;
+            beaver = args.length > 0 ? args[0] : beaver;
 
             // Get the size of the initial subtape
-            if(args.length > 2)
+            if(args.length > 1)
             {
-                lengthOfSubtape = Integer.parseInt(args[2]);
+                lengthOfSubtape = Integer.parseInt(args[1]);
 
                 // Get the size of each recursive layer's subtape
-                subtapeMult = Integer.parseInt(args[3]);
+                subtapeMult = Integer.parseInt(args[2]);
                 
                 // Get the number of recursive layers to compute
-                recursiveLayers = Integer.parseInt(args[4]);
+                recursiveLayers = Integer.parseInt(args[3]);
             }
 
             // Get logging level (optional)
-            if(args.length > 5 && Utility.isInt(args[5]))
-                loggingLevel = Integer.parseInt(args[5]);
+            if(args.length > 4 && Utility.isInt(args[4]))
+                loggingLevel = Integer.parseInt(args[4]);
         }
         catch(Exception e)
         {

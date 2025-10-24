@@ -345,14 +345,14 @@ public class EnumerateSubtapes
 
         int maxSubtapesPerLength = 0;
         int[] lengthArray = Utility.primes;
-        int defaultMinLengthIndex = 7;
-        int defaultLengthCount = 1;
-
+        int defaultMinLengthIndex = 0;
+        int defaultLengthCount = 45;
+        
         // Get command line arguments if applicable
         // This is bad code, please ignore it
         try
         {
-            int argsIndex = 1;
+            int argsIndex = 0;
 
             // Get logging level
             if(args.length > argsIndex && Utility.isInt(args[argsIndex]))

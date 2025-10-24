@@ -146,9 +146,9 @@ public class BBReverseSolver
         // Get command line arguments if applicable
         try
         {
-            beaver = args.length > 1 ? args[1] :  "1RB1LB_1LA1RZ";
-            maxDepth = args.length > 2 ? Integer.parseInt(args[2]) : 30;
-            useTrie = args.length > 3 ? Boolean.parseBoolean(args[3]) : true;
+            beaver = args.length > 0 ? args[0] :  "1RB1LB_1LA1RZ";
+            maxDepth = args.length > 1 ? Integer.parseInt(args[1]) : 30;
+            useTrie = args.length > 2 ? Boolean.parseBoolean(args[2]) : true;
         }
         catch(Exception e)
         {
