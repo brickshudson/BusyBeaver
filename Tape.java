@@ -177,9 +177,13 @@ public class Tape
             if(c != currentChar)
             {
                 // Output the group
-                outString.append((char)currentChar);
-                if(charCount > 1)
+                if(charCount < 4)
+                    outString.append(("" + currentChar).repeat(charCount) + (charCount > 1 ? " " : ""));
+                else
+                {
+                    outString.append(("" + currentChar));
                     outString.append("^" + charCount + " ");
+                }
                 
                 // Start the next group
                 currentChar = c;
